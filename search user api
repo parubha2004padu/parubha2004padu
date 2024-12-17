@@ -1,0 +1,19 @@
+// Search Users Functionality
+async function searchUsers() {
+  const query = document.getElementById('searchInput').value.trim();
+  if (query === '') {
+    document.getElementById('searchResults').innerHTML = '';
+    return;
+  }
+
+  const response = await fetch(`/search?query=${query}`);
+  const users = await response.json();
+
+  const resultsContainer = document.getElementById('searchResults');
+  resultsContainer.innerHTML = users.map(user => `
+    <div class="search-item" onclick="viewProfile(${user.user_id})">
+      <img src="${user.profile_picture || 'default-avatar.jpg'}" alt="${user.username}" class="search-avatar">
+      <span>${user.username}</span>
+    </div>
+  `).join('');
+}
