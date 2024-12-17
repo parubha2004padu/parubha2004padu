@@ -1,0 +1,24 @@
+// Fetch User Profile and Posts
+app.get('/profile/:userId', (req, res) => {
+  const { userId } = req.params;
+
+  const profileSql = `
+    SELECT username, profile_picture, bio, created_at 
+    FROM users WHERE user_id = ?
+  `;
+  const postsSql = `
+    SELECT post_id, content, image_url, created_at 
+    FROM posts WHERE user_id = ? ORDER BY created_at DESC
+  `;
+
+  // Fetch profile and posts concurrently
+  db.query(profileSql, [userId], (err, profileResult) => {
+    if (err) return res.status(500).send('Error fetching user profile.');
+    if (profileResult.length === 0) return res.status(404).send('User not found.');
+
+    db.query(postsSql, [userId], (err, postsResult) => {
+      if (err) return res.status(500).send('Error fetching user posts.');
+      res.json({ profile: profileResult[0], posts: postsResult });
+    });
+  });
+});
