@@ -1,0 +1,27 @@
+social_media_project/
+│
+├── index.html              // Main home page
+├── profile.html            // Profile page
+├── styles.css              // Global styles
+├── db.js                   // Database connection file
+├── server.js               // Main server file
+│
+├── /api/                   // Folder for API files
+│     └── userRoutes.js     // User-related API routes
+│
+├── /public/                // Public folder for static files
+│     ├── /css/             // CSS files
+│     │     └── styles.css
+│     ├── /images/          // Image assets
+│     │     └── default-avatar.jpg
+│     ├── /js/              // JavaScript files
+│     │     ├── script.js   // Main JavaScript
+│     │     └── profile.js  // Profile-specific JavaScript
+│
+├── /database/              // Folder for database scripts
+│     └── schema.sql        // SQL file for table creation
+│
+├── /node_modules/          // Node.js modules
+│
+├── package.json            // Node.js package configuration
+└── README.md               // Project documentation
