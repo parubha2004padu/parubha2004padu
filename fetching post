@@ -1,0 +1,17 @@
+// Fetch Posts with User Info
+app.get('/posts', (req, res) => {
+  const sql = `
+    SELECT posts.post_id, posts.content, posts.image_url, posts.created_at, 
+           users.username, users.profile_picture
+    FROM posts
+    JOIN users ON posts.user_id = users.user_id
+    ORDER BY posts.created_at DESC
+  `;
+
+  db.query(sql, (err, results) => {
+    if (err) {
+      return res.status(500).send('Error fetching posts.');
+    }
+    res.json(results);
+  });
+});
