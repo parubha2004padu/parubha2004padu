@@ -11,75 +11,75 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar .nav-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 1rem;
+.navbar .search-bar {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .main-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 10px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cover-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-info {
+  margin-top: -50px;
+  display: inline-block;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
 }
 
 .post-form {
   background-color: white;
   border-radius: 5px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.post-form textarea {
-  width: 100%;
-  height: 80px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.post-form button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .feed .post {
   background-color: white;
-  margin-top: 15px;
-  padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
-.post-header h3 {
-  margin: 0;
+.friends-list {
+  margin-top: 20px;
 }
 
-.post-header p {
-  margin: 5px 0 10px;
-  color: #666;
-  font-size: 0.9rem;
+.friend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.post-actions button {
-  background-color: transparent;
-  border: none;
-  color: #007bff;
-  cursor: pointer;
+.friend img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   margin-right: 10px;
 }
 
