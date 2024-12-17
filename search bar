@@ -1,0 +1,2 @@
+<input type="text" id="searchInput" placeholder="Search for users..." oninput="searchUsers()">
+<div id="searchResults" class="dropdown"></div>
