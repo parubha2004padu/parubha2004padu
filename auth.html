@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="public/css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <form id="loginForm" class="form">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="email" id="loginEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPassword" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="toggle-text">Don't have an account? <span id="showRegister">Register</span></p>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="registerForm" class="form hidden">
+                <h2>Register</h2>
+                <div class="input-group">
+                    <input type="text" id="registerUsername" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="registerEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="registerPassword" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p class="toggle-text">Already have an account? <span id="showLogin">Login</span></p>
+            </form>
+        </div>
+    </div>
+    <script src="public/js/auth.js"></script>
+</body>
+</html>
