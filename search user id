@@ -1,0 +1,17 @@
+// Search Users
+app.get('/search', (req, res) => {
+  const { query } = req.query;
+
+  const sql = `
+    SELECT user_id, username, profile_picture, bio 
+    FROM users 
+    WHERE username LIKE ? OR email LIKE ?
+  `;
+
+  db.query(sql, [`%${query}%`, `%${query}%`], (err, results) => {
+    if (err) {
+      return res.status(500).send('Error searching for users.');
+    }
+    res.json(results);
+  });
+});
