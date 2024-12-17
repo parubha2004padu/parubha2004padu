@@ -1,0 +1,3 @@
+function viewProfile(userId) {
+  window.location.href = `/profile.html?userId=${userId}`;
+}
