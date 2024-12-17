@@ -1,0 +1,9 @@
+social_media_project/
+├── public/
+│   ├── css/
+│   │   └── auth.css          // Styles for login/registration page
+│   ├── js/
+│   │   └── auth.js           // JavaScript for form toggle and validation
+│   └── images/
+│       └── background.jpg    // Background image
+└── auth.html                 // Login & registration page
